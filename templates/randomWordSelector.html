@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Unique Random Word Selector</h1>
+
+<form action="/action_page.php">
+  <label for="allname">Paste Here</label><br><br>
+  <textarea type="text" id="allname" name="allname" rows="10" cols="50"> 	   </textarea>
+  <br><br>
+  <input type="checkbox" id="seperate" name="seperate1" value="seperate">
+  <label for="seperate1">Separate Text</label>
+  <input type="text" id="tobe" name="tobe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<Script>
+ let text = document.getElementById("tobe").textContent;
+var otherCheckbox = document.querySelector('input[value="seperate"]');
+var otherText = document.querySelector('input[id="tobe"]');
+
+otherText.style.visibility = 'hidden';
+
+otherCheckbox.addEventListener('change', () => {
+  if(otherCheckbox.checked) {
+    otherText.style.visibility = 'visible';
+    otherText.value = '';
+  } else {
+    otherText.style.visibility = 'hidden';
+  }
+});
+</Script>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
+
