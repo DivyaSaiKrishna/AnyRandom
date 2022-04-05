@@ -1,22 +1,13 @@
 import random
-
-from app import randomNumber
-
-
 class NumberGenerator:
-    def randomNumber(self, min, max):
-        return random.randint(min, max)
-    
-        
-        
-        
-            
-## throws Exception:
-      ##  try:
-        ##    if(min > max):
-         ##       raise Exception("Min value is greater than max value")
-      ##      else:
-            ##    return random.randint(min, max)
-       ## except Exception as e:
-        ##    print(e)*/  
-       ## 
+    def __init__(self, min, max):
+        self.min = min
+        self.max = max
+      
+    def randomNumber(min,max):
+        try:
+          if(max > min):
+                return random.randint(min , max)
+          return random.randint(max, min)
+        except Exception as e:
+          print(e)
