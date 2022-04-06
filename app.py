@@ -9,6 +9,8 @@ from service.numberGenerator import NumberGenerator
 from service.ranPWordGenerator import ranPWordGenerator
 from service.randomSequenceGenerator import randomSequenceGenerator
 from service.randomCardPick import randomCardPick
+from service.gaussionRandomNumber import gaussionRandomNumber
+from service.squareRoot import mySquareRoot
 
 app = Flask(__name__)
 
@@ -57,6 +59,15 @@ def randomCardGene():
 @app.route('/card/<num>')
 def randomMCardGene(num):
     return randomCardPick().pickNum(int(num))
+
+@app.route('/guss')
+def randomGaussdGene():
+    return gaussionRandomNumber(1,10).getRandomNumber()
+
+@app.route('/squ/<num>')
+def randomSqusdGene(num):
+    return mySquareRoot(num).squareRoot()
+
 
 
 if __name__ == '__main__':
