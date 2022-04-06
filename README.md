@@ -1,5 +1,7 @@
 # AnyRandom
 
+Note : Repo Build in procress ```======[30%]===== ```
+
 AnyRandom is built using Flask & Python for all random scenarios.
 
 ### Table of Contents
