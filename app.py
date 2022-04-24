@@ -11,6 +11,9 @@ from service.randomSequenceGenerator import randomSequenceGenerator
 from service.randomCardPick import randomCardPick
 from service.gaussionRandomNumber import gaussionRandomNumber
 from service.squareRoot import mySquareRoot
+from service.randomSetGeneration import randomSetGeneration
+from MyRandom.myRandom import myRandom
+from MyRandom.pyRandom import pyRandom
 
 app = Flask(__name__)
 
@@ -68,6 +71,17 @@ def randomGaussdGene():
 def randomSqusdGene(num):
     return mySquareRoot(num).squareRoot()
 
+@app.route('/rset/<numofsets>/<numofunq>/<rangeMax>/<rangeMin>')
+def rrandomSetGeneration(numofsets,numofunq,rangeMax,rangeMin):
+    return randomSetGeneration(numofsets,numofunq,rangeMax,rangeMin).geneRSets()
+
+@app.route('/myRandom/<num>')
+def myrandomNumber(num):
+    return myRandom().cycle(num)
+
+@app.route('/pyRandom/<num>')
+def pyrandomNumber(num):
+    return pyRandom(num).randomCheck()
 
 
 if __name__ == '__main__':

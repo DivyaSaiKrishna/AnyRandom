@@ -1,4 +1,13 @@
-
+######################################################################
+#  Custom Square Root Service
+#
+#   This service computes the square root of a given number.
+#   The service is implemented by using Binary Search.
+#   
+#
+#   Returns:  
+#   Integer : Square root of the given number.
+######################################################################
 
 class mySquareRoot:
     def __init__(self,number):
@@ -8,7 +17,6 @@ class mySquareRoot:
         self.last = number
 
     def squareRoot(self):
-        print('in squareRoot',self.number)
         if(int(self.number) < 0):
             return -1
         elif(int(self.number) == 0):

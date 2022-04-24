@@ -17,7 +17,7 @@ class randomSequenceGenerator:
                 self.sequence.append(randomNumber)
         
         if(len(self.sequence) == self.length):
-            return str(self.sequence)
+            return self.sequence
         else :
             self.generate()
     

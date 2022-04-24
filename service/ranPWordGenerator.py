@@ -1,10 +1,18 @@
+######################################################################
+#  Custom Password Generator Service
+#
+#   This service generates a random password.
+#   
+#   Returns:  
+#   String : returns a random password build by using special characters,greek symbols & roman.
+######################################################################
 
 import random
 
 
 class ranPWordGenerator:
     def __init__(self,length,type):
-        self.alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        self.alphabet =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         self.specialchar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]}{|;':,./<>?`~"
         self.greeksymbol = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]}{|;':,./<>?`~αβζδπΨ"
         self.roman = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]}{|;':,./<>?`~αβζδπΨIVXLCDM"
